@@ -4,19 +4,25 @@
     <ValidationObserver v-slot="{ handleSubmit }">
       <form v-on:submit.prevent="handleSubmit(onSubmit)">
 
-        <vee-name
+        <vee-input
           v-model="formData.name"
           v-bind:rules="'required|alpha_spaces'"
+          v-bind:name="'Name'"
+          v-bind:type="'name'"
         />
 
-        <vee-email
-          v-model="formData.email"
-          v-bind:rules="'required|email'"
+        <vee-input
+            v-model="formData.email"
+            v-bind:rules="'required|email'"
+            v-bind:name="'Email'"
+            v-bind:type="'email'"
         />
 
-        <vee-password
-          v-bind:rules="'required|max:12|min:8'"
-          v-model="formData.password"
+        <vee-input
+            v-model="formData.password"
+            v-bind:rules="'required|max:12|min:8'"
+            v-bind:name="'Password'"
+            v-bind:type="'password'"
         />
 
         <vee-select
@@ -44,18 +50,14 @@
 
 <script>
 import VeeCheckbox from "./VeeCheckbox.vue";
-import VeeEmail from "./VeeEmail.vue";
-import VeeName from "./VeeName.vue";
-import VeePassword from "./VeePassword.vue";
 import VeeSelect from "./VeeSelect.vue";
+import VeeInput from "@/components/VeeInput";
 
 export default {
   components: {
-    VeeName,
-    VeeEmail,
     VeeSelect,
-    VeePassword,
     VeeCheckbox,
+    VeeInput,
   },
 
   data: () => ({

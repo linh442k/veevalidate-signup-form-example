@@ -16,7 +16,6 @@
           v-bind:value="option.value"
           v-bind:key="option.value"
         >{{option.text}}</option>
-
       </select>
       <span>{{ errors[0] }}</span>
     </div>

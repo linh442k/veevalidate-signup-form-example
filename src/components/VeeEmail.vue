@@ -1,5 +1,6 @@
 <template>
-  <ValidationProvider name="Email"
+  <ValidationProvider
+    name="Email"
     v-bind:rules=rules
     v-slot="{ errors }"
   >
