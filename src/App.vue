@@ -1,24 +1,24 @@
 <template>
-  <div id="app" class="container mt-5">
-    <vee-validate-form />
-  </div>
+  <v-app>
+    <v-main>
+      <v-container>
+<!--        <vee-validate-form/>-->
+        <misc-vee-validate/>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import VeeValidateForm from "./components/VeeValidateForm.vue";
+// import VeeValidateForm from "./components/VeeValidateForm.vue";
+import MiscVeeValidate from "@/vee-vuetify/misc-vee-validate";
 
 export default {
   name: "App",
   components: {
-    VeeValidateForm,
+    MiscVeeValidate,
+    // VeeValidateForm,
   },
 };
 </script>
 
-<style>
-@import url("https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css");
-
-#app {
-  color: #2c3e50;
-}
-</style>
